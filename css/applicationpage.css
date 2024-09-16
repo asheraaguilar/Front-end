@@ -1,0 +1,408 @@
+/* General Body Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    background-color: #f9f9f9;
+    overflow-x: hidden;
+}
+
+/* Scrollable Content Styles */
+.scrollable-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    margin-top: 60px;
+    height: calc(100vh - 70px);
+    overflow-x: hidden;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    margin-top: -50px;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+/* Main Content Area */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    margin-left: 20%;
+    margin-top: 2px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.main-content h1 {
+    color: #a70000;
+    font-size: 32px;
+}
+
+.main-content h2 {
+    color: #a70000;
+    font-size: 24px;
+    margin-top: 5px;
+}
+
+/* Vertical Step-by-Step Progress Indicator */
+.progress-indicator {
+    margin: 20px 0;
+    width: 200px;
+    padding-left: 0;
+}
+
+.progress-indicator ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.progress-indicator ul li {
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #999;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.progress-indicator ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    background-color: gray;
+    border-radius: 50%;
+}
+
+.progress-indicator ul li.active::before {
+    background-color: #007bff;
+}
+
+.progress-indicator ul li.completed::before {
+    background-color: green;
+}
+
+.progress-indicator ul li.active,
+.progress-indicator ul li.completed {
+    color: #007bff;
+}
+
+.progress-indicator ul li.completed {
+    color: green;
+}
+
+.progress-indicator ul li + li::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 4px;
+    width: 2px;
+    height: 100%;
+    background-color: #007bff;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+/* Application Steps */
+.application-steps {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+/* Step Button Styling */
+.step-button {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ececec;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.step-button:hover {
+    background-color: #ececec;
+}
+
+.step-button.active {
+    background-color: #ececec;
+    border-color: #a70000;
+}
+
+.step-button.completed {
+    background-color: #4caf50;
+    border-color: #4caf50;
+}
+
+.step-icon.completed {
+    background-color: #4caf50;
+}
+
+.step-icon {
+    background-color: #a70000;
+    color: white;
+    font-size: 25px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.step-description h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.step-description p {
+    margin: 0;
+    font-size: 12px;
+    color: #666;
+}
+
+/* User Info */
+.user-info {
+    font-size: 14px;
+    color: #333;
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ececec;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Container */
+.form-container {
+    flex: 1;
+    padding-right: 20px;
+}
+
+/* Form Sections */
+.form-section {
+    background-color: white;
+    padding: 20px;
+    padding-right: 50px;
+    margin-top: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Additional Form Styling for Side-by-Side Inputs */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.form-column {
+    width: 48%;
+}
+
+.form-column label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-column input[type="text"], 
+.form-column input[type="number"],
+.form-column input[type="date"],
+.form-column select {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Picture Container */
+.picture-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.picture-container img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.picture-container input[type="file"] {
+    margin-top: 10px;
+}
+
+/* Next Button */
+.next-btn {
+    background-color: #6d0d0d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.next-btn:hover {
+    background-color: #a70000;
+}
+
+/* Radio Button Styling */
+.form-group label {
+    margin-right: 15px;
+}
+
+.form-group input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Sibling Table Styles */
+#siblings-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#siblings-table th, 
+#siblings-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+#siblings-table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+    color: #333;
+}
+
+#siblings-table td input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#siblings-table td input[type="date"] {
+    padding: 5px;
+}
+
+#siblings-table td input[type="number"] {
+    width: 60px;
+    padding: 5px;
+}
+
+/* Add Sibling Button */
+.add-sibling-btn {
+    background-color: gray;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.add-sibling-btn:hover {
+    background-color: darkgray;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .progress-indicator {
+        width: 100%;
+        padding-left: 10px;
+    }
+
+    .progress-indicator ul {
+        width: 100%;
+    }
+
+    .application-steps {
+        width: 100%;
+    }
+
+    .step-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+    }
+
+    .step-description h3 {
+        font-size: 16px;
+    }
+
+    .step-description p {
+        font-size: 10px;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-column {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-content h1, .main-content h2 {
+        font-size: 24px;
+    }
+
+    .next-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .step-description h3 {
+        font-size: 14px;
+    }
+
+    .step-description p {
+        font-size: 8px;
+    }
+}

@@ -1,0 +1,290 @@
+/* General body styling */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('../img/Background2.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+/* Container styling */
+.container {
+    max-width: 600px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    position: relative;
+    margin: 20px;
+}
+
+/* Form title styling */
+h2 {
+    font-size: 24px;
+    color: #a70000;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Progress bar container */
+.progress-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.progress-container::before {
+    content: "";
+    background-color: #ddd;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    z-index: -1;
+}
+
+/* Progress bar */
+.progress {
+    background-color: #a70000;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 0;
+    transition: width 0.4s ease;
+}
+
+/* Progress circles */
+.circle {
+    background-color: #fff;
+    color: #999;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #ddd;
+    transition: all 0.4s ease;
+    z-index: 1;
+}
+
+.circle.active {
+    border-color: #a70000;
+    color: #a70000;
+}
+
+/* Hide form steps except the active one */
+.form-step {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.form-step.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Form row container */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+/* Input field styling */
+.input-data {
+    flex: 1 1 48%;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-data input,
+.input-data select {
+    width: 100%;
+    padding: 12px 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    background-color: transparent;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+/* File input specific styling */
+.input-data input[type="file"] {
+    padding: 5px;
+    border: none;
+}
+
+/* Focus styling for input fields */
+.input-data input:focus,
+.input-data select:focus {
+    border-color: #a70000;
+}
+
+/* Label styling */
+.input-data label {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #999;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+/* Move label when the input is focused or filled */
+.input-data input:focus + label,
+.input-data input:not(:placeholder-shown) + label,
+.input-data select:focus + label,
+.input-data select:not([value=""]) + label {
+    top: -12px;
+    left: 12px;
+    font-size: 12px;
+    color: #a70000;
+}
+
+/* Full-width input data */
+.input-data.full-width {
+    flex: 1 1 100%;
+}
+
+/* Button styling */
+input[type="button"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #a70000;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="button"]:hover,
+input[type="submit"]:hover {
+    background-color: #d10000;
+}
+
+/* Checkbox group styling */
+.checkbox-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-group input {
+    margin-right: 10px;
+}
+
+.red-text {
+    color: #a70000;
+}
+
+/* Navigation buttons */
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation-buttons input {
+    width: 48%;
+    padding: 10px;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+    .input-data {
+        flex: 1 1 100%;
+    }
+
+    .navigation-buttons {
+        flex-direction: column;
+    }
+
+    .navigation-buttons input {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .progress-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .circle {
+        margin-bottom: 10px;
+    }
+}
+
+/* For extra-small screens */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .input-data input,
+    .input-data select {
+        font-size: 14px;
+    }
+
+    .circle {
+        height: 25px;
+        width: 25px;
+        font-size: 14px;
+    }
+
+    .progress-container::before {
+        height: 3px;
+    }
+
+    .progress {
+        height: 3px;
+    }
+}

@@ -1,0 +1,53 @@
+.sidebar {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #8B0000;
+    color: white;
+    width: 20%;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 80px; /* Increase the width to make the logo slightly larger */
+    height: auto;
+}
+
+.welcome {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin-bottom: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a i {
+    margin-right: 10px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}

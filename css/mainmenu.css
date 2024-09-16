@@ -1,0 +1,138 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+}
+
+.container {
+    display: flex;
+}
+
+.main-content {
+    margin-left: 20%; /* Adjust for fixed sidebar width */
+    width: 80%; /* Full width minus sidebar width */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    font-size: 28px;
+    margin: 0;
+    color: #8B0000;
+}
+
+.applicant-info p {
+    margin: 5px 0;
+}
+
+.applicant-info .pending {
+    color: red;
+}
+
+.carousel {
+    position: relative;
+    background-color: #fff;
+    padding: 0;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.carousel-inner {
+    overflow: hidden;
+    height: 400px;
+    position: relative;
+}
+
+.carousel-item {
+    position: absolute;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-item.active {
+    position: relative;
+    transform: translateX(0);
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.carousel-control {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    padding: 10px;
+}
+
+.carousel-control.prev {
+    left: 0;
+}
+
+.carousel-control.next {
+    right: 0;
+}
+
+.mission-vision {
+    display: flex;
+    flex-direction: column; /* Stack them vertically on smaller screens */
+    gap: 20px; /* Add space between mission and vision */
+    margin-top: 20px; /* Add space above the mission and vision boxes */
+}
+
+.mission, .vision {
+    background-color: #fff;
+    padding: 25px; /* Increase padding for better content spacing */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Slightly round the corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission h3, .vision h3 {
+    color: #8B0000;
+    font-size: 22px; /* Slightly increase the font size */
+    margin-bottom: 15px; /* Add space below the heading */
+}
+
+.mission p, .vision p {
+    line-height: 1.6; /* Improve readability */
+    color: #333;
+}
+
+.mission:hover, .vision:hover {
+    transform: translateY(-5px); /* Add a subtle lift on hover */
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1); /* Increase the shadow on hover */
+}
+
+@media (min-width: 768px) {
+    .mission-vision {
+        flex-direction: row; /* Display them side by side on larger screens */
+    }
+}
