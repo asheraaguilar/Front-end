@@ -22,6 +22,7 @@
             <div class="form-step active" id="step-1">
                 <h2>Personal Background</h2>
                 <form id="registration-form">
+                    <!-- All input fields for Personal Background -->
                     <div class="form-row">
                         <div class="input-data">
                             <input type="text" id="surname" required>
@@ -38,14 +39,14 @@
                             <label for="middle-name">Middle Name</label>
                         </div>
                         <div class="input-data">
-                            <input type="date" id="dob" required>
-                            <label for="dob">Date of Birth</label>
+                            <input type="text" id="suffix-name">
+                            <label for="suffix-name">Suffix Name</label>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="input-data">
-                            <input type="text" id="place-of-birth" required>
-                            <label for="place-of-birth">Place of Birth</label>
+                            <input type="date" id="dob" required>
+                            <label for="dob">Date of Birth</label>
                         </div>
                         <div class="input-data">
                             <input type="number" id="age" required>
@@ -85,11 +86,9 @@
                     </div>
                     <div class="form-row">
                         <div class="input-data">
-                            <input type="text" id="purok" required>
-                            <label for="purok">Purok/Street</label>
+                            <input type="text" id="place-of-birth" required>
+                            <label for="place-of-birth">Place of Birth</label>
                         </div>
-                    </div>
-                    <div class="form-row">
                         <div class="input-data">
                             <select id="district" required>
                                 <option value="" disabled selected></option>
@@ -100,6 +99,12 @@
                                 <option value="urban">Urban</option>
                             </select>
                             <label for="district">District</label>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-data">
+                            <input type="text" id="purok" required>
+                            <label for="purok">Purok/Street</label>
+                        </div>
                         </div>
                         <div class="input-data">
                             <select id="barangay" required>
@@ -112,6 +117,7 @@
                             </select>
                             <label for="barangay">Barangay</label>
                         </div>
+                    </div>
                     <div class="form-row">
                         <div class="input-data">
                             <select id="apptype" required>
@@ -133,7 +139,8 @@
                             </select>
                             <label for="benefits">Other Benefit Received</label>
                         </div>
-                        <div class="form-row">
+                    </div>
+                    <div class="form-row">
                         <div class="input-data">
                             <input type="password" id="password" required>
                             <label for="password">Password</label>
@@ -142,19 +149,19 @@
                             <input type="password" id="conpassword" required>
                             <label for="conpassword">Confirm Password</label>
                         </div>
-                        <div class="form-row">
-                            <div class="checkbox-group">
-                                <label>
-                                    <input type="checkbox" name="student-type">
-                                    <span class="red-text">Lipeno Student</span>
-                                </label>
-                                <label>
-                                    <input type="checkbox" name="student-type">
-                                    <span class="red-text">Non-KLL Student</span>
-                                </label>
-                            </div>
-                        </div>
                     </div>
+                    <div class="form-row">
+                        <div class="checkbox-group">
+                            <label>
+                                Select all that may apply. 
+                                <input type="checkbox" name="student-type">
+                                <span class="red-text">Lipeno Student</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="student-type">
+                                <span class="red-text">Non-KLL Student</span>
+                            </label>
+                        </div>
                     </div>
                     <div class="form-row submit-btn">
                         <input type="button" value="Next" onclick="nextStep()">

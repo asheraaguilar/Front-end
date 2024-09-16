@@ -6,21 +6,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to show the current step and hide others
     function showStep(stepIndex) {
-        console.log("Current Step Index: ", stepIndex); // Log step index
+        console.log("Current Step Index: ", stepIndex);
 
         steps.forEach((step, index) => {
             if (index === stepIndex) {
-                console.log("Showing step: ", stepIndex); // Debug which step is shown
+                console.log("Showing step: ", stepIndex);
                 step.classList.add('active');
-                step.style.display = 'block';  // Show the active step
+                step.style.display = 'block';
             } else {
-                console.log("Hiding step: ", index); // Debug which step is hidden
+                console.log("Hiding step: ", index);
                 step.classList.remove('active');
-                step.style.display = 'none';  // Hide non-active steps
+                step.style.display = 'none';
             }
         });
 
-        // Update progress circles
         circles.forEach((circle, index) => {
             if (index <= stepIndex) {
                 circle.classList.add('active');
@@ -29,30 +28,41 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Update progress bar width
         const progressPercent = (stepIndex / (steps.length - 1)) * 100;
         progress.style.width = `${progressPercent}%`;
     }
 
     // Next step function
-    window.nextStep = () => {
-        console.log("Next Step Function Called"); // Debugging log for next step function
+    function nextStep() {
+        console.log("Next Step Function Called");
         if (currentStep < steps.length - 1) {
             currentStep++;
-            console.log("Current Step Updated: ", currentStep); // Log updated step index
+            console.log("Current Step Updated: ", currentStep);
             showStep(currentStep);
         }
-    };
+    }
 
     // Previous step function
-    window.prevStep = () => {
-        console.log("Previous Step Function Called"); // Debugging log for previous step function
+    function prevStep() {
+        console.log("Previous Step Function Called");
         if (currentStep > 0) {
             currentStep--;
-            console.log("Current Step Updated: ", currentStep); // Log updated step index
+            console.log("Current Step Updated: ", currentStep);
             showStep(currentStep);
         }
-    };
+    }
+
+    // Attach event listeners to all "Previous" and "Next" buttons
+    const nextButtons = document.querySelectorAll('.next-btn');
+    const prevButtons = document.querySelectorAll('.prev-btn');
+
+    nextButtons.forEach(button => {
+        button.addEventListener('click', nextStep);
+    });
+
+    prevButtons.forEach(button => {
+        button.addEventListener('click', prevStep);
+    });
 
     // Initially show the first step
     showStep(currentStep);
@@ -61,11 +71,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const addSiblingBtn = document.getElementById('add-sibling-btn');
     const siblingsTable = document.getElementById('siblings-table').getElementsByTagName('tbody')[0];
 
-    // Function to add a new row in the table
     addSiblingBtn.addEventListener('click', () => {
-        const newRow = siblingsTable.insertRow();  // Add new row
+        const newRow = siblingsTable.insertRow();
 
-        // Add cells with input fields
         newRow.innerHTML = `
             <td><input type="text" name="sibling-name[]" required></td>
             <td><input type="text" name="sibling-occupation[]" required></td>

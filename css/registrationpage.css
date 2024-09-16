@@ -12,13 +12,12 @@ body {
     overflow-x: hidden;
 }
 
-/* Container styling */
 .container {
-    max-width: 600px;
+    max-width: 700px; /* Increased for more content width */
     width: 100%;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
-    padding: 25px;
+    padding: 40px; /* Increased padding to create space between textboxes and container */
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     z-index: 1;
     position: relative;
@@ -98,19 +97,20 @@ h2 {
     opacity: 1;
 }
 
-/* Form row container */
 .form-row {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
     flex-wrap: wrap;
+    gap: 27px; /* Add space between the input elements */
 }
 
 /* Input field styling */
 .input-data {
-    flex: 1 1 48%;
+    flex: 1 1 48%; /* Ensure 2 inputs per row by default */
     position: relative;
     margin-bottom: 20px;
+    min-width: 200px; /* Ensure a minimum width to avoid shrinking too much */
 }
 
 .input-data input,
@@ -123,6 +123,7 @@ h2 {
     font-size: 16px;
     color: #333;
     outline: none;
+    box-sizing: border-box; 
     transition: border-color 0.3s;
 }
 
@@ -130,6 +131,17 @@ h2 {
 .input-data input[type="file"] {
     padding: 5px;
     border: none;
+    box-sizing: border-box;
+}
+
+/* Make sure select fields and text input fields are of the same size */
+.input-data select {
+    height: 42px; /* Match the height of text inputs for consistent appearance */
+    padding-right: 10px; /* Allow space for dropdown arrow */
+}
+
+.input-data.full-width {
+    flex: 1 1 100%;
 }
 
 /* Focus styling for input fields */
@@ -185,6 +197,22 @@ input[type="submit"]:hover {
     background-color: #d10000;
 }
 
+#add-sibling-btn {
+    width: auto; /* Adjust width as needed */
+    background-color: #28a745; /* Green color for Add Sibling */
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px; /* Add some padding for a larger clickable area */
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#add-sibling-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
 /* Checkbox group styling */
 .checkbox-group {
     display: flex;
@@ -210,6 +238,7 @@ input[type="submit"]:hover {
 .navigation-buttons {
     display: flex;
     justify-content: space-between;
+    gap: 20px; /* Add space between the buttons */
 }
 
 .navigation-buttons input {
@@ -220,29 +249,40 @@ input[type="submit"]:hover {
 /* Table styling */
 table {
     width: 100%;
+    max-width: 100%;
+    table-layout: auto;
     border-collapse: collapse;
     margin-top: 20px;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-x: auto;
 }
 
 table th, table td {
     border: 1px solid #ddd;
     padding: 10px;
     text-align: left;
+    box-sizing: border-box;
+    white-space: nowrap; 
+}
+
+table th {
+    background-color: #f4f4f4;  /* Optional: add background color for table headers */
 }
 
 /* Responsive adjustments */
 @media (max-width: 700px) {
     .input-data {
-        flex: 1 1 100%;
+        flex: 1 1 100%; /* Stack inputs on top of each other on small screens */
     }
 
     .navigation-buttons {
         flex-direction: column;
+        gap: 10px;
     }
 
     .navigation-buttons input {
         width: 100%;
-        margin-top: 10px;
     }
 
     .progress-container {
@@ -252,6 +292,10 @@ table th, table td {
 
     .circle {
         margin-bottom: 10px;
+    }
+
+    table {
+        font-size: 14px;  /* Adjust table font size for smaller screens */
     }
 }
 
@@ -286,5 +330,11 @@ table th, table td {
 
     .progress {
         height: 3px;
+    }
+
+    table th, table td {
+        font-size: 12px; /* Further reduce table font size on smaller screens */
+        padding: 8px;    /* Reduce padding to fit content better */
+        white-space: normal;
     }
 }

@@ -18,7 +18,7 @@
             <a href="#home">Home</a>
             <a href="#carousel">Articles</a>
             <a href="loginpage.php">Login</a>
-            <a href="registrationpage.php">Apply</a>
+            <a href="applyhome.php">Apply</a>
             <a href="#contact">Contact Us</a>
         </nav>
     </header>
