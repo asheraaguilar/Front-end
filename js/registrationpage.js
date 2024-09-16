@@ -6,15 +6,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to show the current step and hide others
     function showStep(stepIndex) {
-        console.log("Current Step Index: ", stepIndex);
-
         steps.forEach((step, index) => {
             if (index === stepIndex) {
-                console.log("Showing step: ", stepIndex);
                 step.classList.add('active');
                 step.style.display = 'block';
             } else {
-                console.log("Hiding step: ", index);
                 step.classList.remove('active');
                 step.style.display = 'none';
             }
@@ -34,20 +30,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Next step function
     function nextStep() {
-        console.log("Next Step Function Called");
         if (currentStep < steps.length - 1) {
             currentStep++;
-            console.log("Current Step Updated: ", currentStep);
             showStep(currentStep);
         }
     }
 
     // Previous step function
     function prevStep() {
-        console.log("Previous Step Function Called");
         if (currentStep > 0) {
             currentStep--;
-            console.log("Current Step Updated: ", currentStep);
             showStep(currentStep);
         }
     }
@@ -82,4 +74,22 @@ document.addEventListener('DOMContentLoaded', () => {
             <td><input type="number" name="sibling-age[]" required></td>
         `;
     });
+
+    // Handle form submission
+    const form = document.getElementById('registration-form');
+    
+    form.addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+
+        // Trigger the SweetAlert2
+        Swal.fire({
+            title: 'YOUR APPLICATION HAS BEEN SUBMITTED!',
+            text: 'We will reach out to you via email as soon as we have processed your application. Thank you!',
+            icon: 'success',
+            confirmButtonText: 'OK'
+        }).then(() => {
+            form.reset(); // Clear the form after submission
+        });
+    });
+
 });

@@ -352,11 +352,12 @@
                 </div>
                 <div class="form-row navigation-buttons">
                     <input type="button" value="Back" onclick="prevStep()">
-                    <input type="submit" value="Submit">
+                    <input type="submit" value="Submit" onclick="submitForm(event)">
                 </div>
             </div>
         </div>
     </div>
     <script src="../js/registrationpage.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
