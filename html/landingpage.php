@@ -16,7 +16,7 @@
         </div>
         <nav class="header-right">
             <a href="#home">Home</a>
-            <a href="#carousel">Articles</a>
+            <a href="#carousel">News</a>
             <a href="loginpage.php">Login</a>
             <a href="applyhome.php">Apply</a>
             <a href="#contact">Contact Us</a>

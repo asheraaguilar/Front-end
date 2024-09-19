@@ -29,14 +29,7 @@
             <div class="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="../img/announcement1.jpg" alt="Announcement 1">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../img/announcement2.jpg" alt="Announcement 2">
-                        <div class="carousel-caption">
-                            <h2>ANNOUNCEMENT 2</h2>
-                            <p>Some other announcement content here.</p>
-                        </div>
+                        <img src="../img/Announcement.png" alt="Announcement 1">
                     </div>
                 </div>
                 <button class="carousel-control prev">❮</button>

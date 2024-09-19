@@ -16,103 +16,132 @@ body {
     overflow-y: auto;
     margin-top: 60px;
     height: calc(100vh - 70px);
-    overflow-x: hidden;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #a70000;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar h1 {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.sidebar img {
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 /* Main Container */
 .container {
     display: flex;
-    margin-top: -50px;
-    margin-bottom: 50px;
     width: 100%;
+    padding: 20px;
+    gap: 20px;
 }
 
 /* Main Content Area */
 .main-content {
-    flex: 1;
-    padding: 20px;
-    margin-left: 20%;
-    margin-top: 2px;
+    width:100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+}
+
+.main-content h1, .main-content h2 {
+    color: #a70000;
 }
 
 .main-content h1 {
-    color: #a70000;
     font-size: 32px;
+    color: #a70000;
+    margin-bottom: 10px;
 }
 
 .main-content h2 {
-    color: #a70000;
     font-size: 24px;
-    margin-top: 5px;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
-/* Vertical Step-by-Step Progress Indicator */
-.progress-indicator {
-    margin: 20px 0;
-    width: 200px;
-    padding-left: 0;
-}
-
-.progress-indicator ul {
+/* Progress Bar Styles */
+ul.progressbar {
+    display: flex;
+    justify-content: space-between;
     list-style-type: none;
     padding-left: 0;
-}
-
-.progress-indicator ul li {
-    position: relative;
     margin-bottom: 20px;
-    padding-left: 20px;
+    counter-reset: step;
+    width: 100%;
+}
+
+ul.progressbar li {
+    width: 33.33%;
+    text-align: center;
+    position: relative;
     font-weight: bold;
-    cursor: pointer;
     color: #999;
-    transition: background-color 0.3s, color 0.3s;
 }
 
-.progress-indicator ul li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 10px;
-    height: 10px;
-    background-color: gray;
+ul.progressbar li::before {
+    content: counter(step);
+    counter-increment: step;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #999;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px;
     border-radius: 50%;
+    line-height: 30px;
+    background-color: #fff;
 }
 
-.progress-indicator ul li.active::before {
-    background-color: #007bff;
+ul.progressbar li.active::before {
+    background-color:  #a70000;
+    color: #fff;
 }
 
-.progress-indicator ul li.completed::before {
+ul.progressbar li.completed::before {
     background-color: green;
+    color: #fff;
 }
 
-.progress-indicator ul li.active,
-.progress-indicator ul li.completed {
-    color: #007bff;
-}
-
-.progress-indicator ul li.completed {
-    color: green;
-}
-
-.progress-indicator ul li + li::after {
-    content: "";
+ul.progressbar li::after {
+    content: '';
     position: absolute;
-    top: 10px;
-    left: 4px;
-    width: 2px;
-    height: 100%;
-    background-color: #007bff;
+    width: 100%;
+    height: 2px;
+    background-color: #ddd;
+    top: 15px;
+    left: -50%;
+    z-index: -1;
+}
+
+ul.progressbar li:first-child::after {
+    content: none;
+}
+
+ul.progressbar li.active ~ li::after,
+ul.progressbar li.completed::after {
+    background-color: #a70000;
+}
+
+ul.progressbar li.completed ~ li::after {
+    background-color: green;
 }
 
 /* Content Wrapper */
 .content-wrapper {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
 }
 
@@ -125,15 +154,20 @@ body {
 
 /* Step Button Styling */
 .step-button {
+    flex: 1;
     display: flex;
     align-items: center;
     background-color: #fff;
     border: 1px solid #ececec;
     border-radius: 5px;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-right: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+}
+
+.step-button:last-child {
+    margin-right: 0;
 }
 
 .step-button:hover {
@@ -179,6 +213,13 @@ body {
     color: #666;
 }
 
+.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
 /* User Info */
 .user-info {
     font-size: 14px;
@@ -194,18 +235,18 @@ body {
 /* Form Container */
 .form-container {
     flex: 1;
-    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Form Sections */
 .form-section {
     background-color: white;
     padding: 20px;
-    padding-right: 50px;
-    margin-top: 0;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 100%;
+    margin-bottom: 20px;
 }
 
 /* Form Group */
@@ -213,11 +254,10 @@ body {
     margin-bottom: 20px;
 }
 
-/* Additional Form Styling for Side-by-Side Inputs */
+/* Form Row */
 .form-row {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
 }
 
 .form-column {
@@ -231,7 +271,7 @@ body {
     color: #333;
 }
 
-.form-column input[type="text"], 
+.form-column input[type="text"],
 .form-column input[type="number"],
 .form-column input[type="date"],
 .form-column select {
@@ -278,15 +318,6 @@ body {
     background-color: #a70000;
 }
 
-/* Radio Button Styling */
-.form-group label {
-    margin-right: 15px;
-}
-
-.form-group input[type="radio"] {
-    margin-right: 5px;
-}
-
 /* Sibling Table Styles */
 #siblings-table {
     width: 100%;
@@ -294,8 +325,7 @@ body {
     margin-bottom: 20px;
 }
 
-#siblings-table th, 
-#siblings-table td {
+#siblings-table th, #siblings-table td {
     padding: 10px;
     border: 1px solid #ccc;
     text-align: left;
@@ -304,7 +334,6 @@ body {
 #siblings-table th {
     background-color: #f5f5f5;
     font-weight: bold;
-    color: #333;
 }
 
 #siblings-table td input {
@@ -312,15 +341,6 @@ body {
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
-}
-
-#siblings-table td input[type="date"] {
-    padding: 5px;
-}
-
-#siblings-table td input[type="number"] {
-    width: 60px;
-    padding: 5px;
 }
 
 /* Add Sibling Button */
@@ -342,40 +362,10 @@ body {
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
-        align-items: center;
-        margin-left: 0;
     }
 
     .main-content {
-        margin-left: 0;
         padding: 10px;
-    }
-
-    .progress-indicator {
-        width: 100%;
-        padding-left: 10px;
-    }
-
-    .progress-indicator ul {
-        width: 100%;
-    }
-
-    .application-steps {
-        width: 100%;
-    }
-
-    .step-icon {
-        width: 30px;
-        height: 30px;
-        font-size: 18px;
-    }
-
-    .step-description h3 {
-        font-size: 16px;
-    }
-
-    .step-description p {
-        font-size: 10px;
     }
 
     .form-row {
@@ -384,7 +374,11 @@ body {
 
     .form-column {
         width: 100%;
-        margin-bottom: 10px;
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 10px;
     }
 }
 

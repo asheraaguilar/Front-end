@@ -20,13 +20,12 @@
                 <h1>Educational Benefit Assistance - Lipa City</h1>
                 <h2>Application</h2>
                 <!-- Progress Indicator -->
-                <div class="progress-indicator">
-                    <ul id="progress-steps">
-                        <li class="active" id="progress-basic-info">Basic Info</li>
-                        <li id="progress-requirements">Requirements</li>
-                        <li id="progress-submitted">Submitted</li>
-                    </ul>
-                </div>
+                <div class="container">
+                <ul class="progressbar">
+                    <li class="active"><i class="fa fa-user"></i> Basic Info</li>
+                    <li><i class="fa fa-file"></i> Requirements</li>
+                    <li><i class="fa fa-check"></i> Submit</li>
+                </ul>
                 <div class="content-wrapper">
                     <div class="application-steps">
                         <button class="step-button active" id="step-1" onclick="showForm('additional-info')">

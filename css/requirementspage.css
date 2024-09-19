@@ -1,0 +1,233 @@
+/* General body styling */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Main content layout */
+.main-content {
+    margin-left: 20%; /* Adjust for fixed sidebar width */
+    width: 80%; /* Full width minus sidebar width */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    font-size: 28px;
+    margin: 0;
+    color: #8B0000;
+}
+
+.applicant-info p {
+    margin: 5px 0;
+}
+
+.applicant-info .pending {
+    color: red;
+}
+
+/* Requirements section styling */
+.requirements {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.requirements h2 {
+    color: #8B0000;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.requirements:hover {
+    transform: translateY(-5px); /* Add a subtle lift on hover */
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1); /* Increase shadow on hover */
+}
+
+/* Table styling */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.table th, .table td {
+    text-align: left;
+    padding: 12px;
+}
+
+.table th {
+    background-color: #f3f3f3;
+    color: #888;
+}
+
+.table td {
+    background-color: #fff;
+}
+
+/* Buttons styling */
+.table .delete-btn {
+    background-color: #8B0000;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.table .delete-btn:hover {
+    background-color: #A00000;
+}
+
+.submit-btn {
+    background-color: #8B0000;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.submit-btn:hover {
+    background-color: #A00000;
+}
+
+/* Progress Bar Styles */
+ul.progressbar {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+    counter-reset: step;
+    width: 100%;
+}
+
+ul.progressbar li {
+    width: 33.33%;
+    text-align: center;
+    position: relative;
+    font-weight: bold;
+    color: #999;
+}
+
+ul.progressbar li::before {
+    content: counter(step);
+    counter-increment: step;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #999;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+    line-height: 30px;
+    background-color: #fff;
+}
+
+ul.progressbar li.active::before {
+    background-color:  #a70000;
+    color: #fff;
+    border-color: #a70000;
+}
+
+ul.progressbar li.completed::before {
+    background-color: green;
+    color: #fff;
+}
+
+ul.progressbar li::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ddd;
+    top: 15px;
+    left: -50%;
+    z-index: -1;
+}
+
+ul.progressbar li:first-child::after {
+    content: none;
+}
+
+ul.progressbar li.active ~ li::after,
+ul.progressbar li.completed::after {
+    background-color: #a70000;
+}
+
+ul.progressbar li.completed ~ li::after {
+    background-color: green;
+}
+
+/* Progress Bar Control Buttons */
+.progress-bar-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.progress-bar-controls button {
+    background-color: #8B0000;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.progress-bar-controls button:hover {
+    background-color: #A00000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .table th, .table td {
+        padding: 8px;
+    }
+
+    .submit-btn {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+
+    .progress-bar-controls button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
