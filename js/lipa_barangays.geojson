@@ -1,0 +1,798 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Anilao Proper",
+          "scholars": 987
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Anilao East",
+          "scholars": 1345
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Antipolo Del Norte",
+          "scholars": 1056
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Antipolo Del Sur",
+          "scholars": 875
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Bagong Pook",
+          "scholars": 1452
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Balintawak",
+          "scholars": 1132
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Banaybanay",
+          "scholars": 1321
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Bolbok",
+          "scholars": 754
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Bugtong na Pulo",
+          "scholars": 1425
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Bulacnin",
+          "scholars": 1349
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Calamias",
+          "scholars": 1203
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Cumba",
+          "scholars": 876
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Dagatan",
+          "scholars": 1358
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Duhatan",
+          "scholars": 928
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Halang",
+          "scholars": 1322
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Inosloban",
+          "scholars": 1034
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Kayumanggi",
+          "scholars": 925
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Latag",
+          "scholars": 1431
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Lodlod",
+          "scholars": 900
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Lumbang",
+          "scholars": 1302
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Mabini",
+          "scholars": 876
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Malagonlong",
+          "scholars": 1209
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Malitlit",
+          "scholars": 1538
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Marawoy",
+          "scholars": 1401
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Mataas na Lupa",
+          "scholars": 1354
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Munting Pulo",
+          "scholars": 924
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Pagolingin Bata",
+          "scholars": 1243
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Pagolingin East",
+          "scholars": 1452
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Pagolingin West",
+          "scholars": 978
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Poblacion Barangay 1",
+          "scholars": 1322
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Poblacion Barangay 2",
+          "scholars": 786
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Poblacion Barangay 3",
+          "scholars": 1254
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Poblacion Barangay 4",
+          "scholars": 1321
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Poblacion Barangay 5",
+          "scholars": 1098
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Poblacion Barangay 6",
+          "scholars": 853
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Poblacion Barangay 7",
+          "scholars": 1587
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Poblacion Barangay 8",
+          "scholars": 762
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Poblacion Barangay 9",
+          "scholars": 1357
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Poblacion Barangay 10",
+          "scholars": 1457
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Poblacion Barangay 11",
+          "scholars": 912
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Poblacion Barangay 12",
+          "scholars": 1303
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Poblacion Barangay 13",
+          "scholars": 1012
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Poblacion Barangay 14",
+          "scholars": 870
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Pusil",
+          "scholars": 1137
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Quezon",
+          "scholars": 1415
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Rizal",
+          "scholars": 905
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Sabang",
+          "scholars": 1570
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Sampaguita",
+          "scholars": 1090
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "San Benito",
+          "scholars": 887
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "San Carlos",
+          "scholars": 1412
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "San Celestino",
+          "scholars": 952
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "San Francisco",
+          "scholars": 1057
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "San Guillermo",
+          "scholars": 1334
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "San Jose",
+          "scholars": 1573
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "San Lucas",
+          "scholars": 1451
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "San Salvador",
+          "scholars": 1211
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Santo Niño",
+          "scholars": 925
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Santo Toribio",
+          "scholars": 1563
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Sapac",
+          "scholars": 689
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Sico",
+          "scholars": 1532
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Talisay",
+          "scholars": 1341
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Tambo",
+          "scholars": 1221
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Tangob",
+          "scholars": 1119
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Tibig",
+          "scholars": 1300
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Tipacan",
+          "scholars": 1443
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Tambo Ilaya",
+          "scholars": 913
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Tambo Proper",
+          "scholars": 853
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Pinagtung-Ulan",
+          "scholars": 1542
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Pangao",
+          "scholars": 872
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Marauoy",
+          "scholars": 1284
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Balintawak",
+          "scholars": 1165
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Plaridel",
+          "scholars": 1562
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[121.0, 13.0], [121.1, 13.0], [121.1, 13.1], [121.0, 13.1], [121.0, 13.0]]]
+        }
+      }
+    ]
+  }
+  

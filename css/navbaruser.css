@@ -1,0 +1,238 @@
+/* Base sidebar styles */
+.sidebar {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #8B0000;
+    color: white;
+    width: 80px; /* Initial small width for icons */
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: width 0.3s ease; /* Smooth transition when expanding */
+}
+
+.sidebar:hover {
+    width: 250px; /* Expands when hovered */
+}
+
+/* Logo styles */
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 50px; /* Smaller logo */
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover effect for the logo: grows and changes color */
+.sidebar:hover .logo {
+    width: 60px; /* Grows slightly */
+    filter: brightness(1.5) saturate(1.5); /* Color change effect */
+}
+
+/* Menu styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin-bottom: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px; /* Smaller font size */
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+nav ul li a i {
+    font-size: 18px; /* Smaller icon size */
+    transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a .menu-item {
+    opacity: 0;
+    white-space: nowrap;
+    margin-left: 15px;
+    transition: opacity 0.3s ease, margin-left 0.3s ease;
+}
+
+/* Sidebar hover effect to show text and change color */
+.sidebar:hover .menu-item {
+    opacity: 1;
+    margin-left: 20px; /* Moves the text slightly on hover */
+}
+
+nav ul li a:hover {
+    color: #FFD700; /* Gold color on hover */
+}
+
+nav ul li a:hover i {
+    color: #FFD700; /* Change icon color on hover */
+    font-size: 22px; /* Enlarge icon size on hover */
+}
+
+/* Hover effects for the text */
+.sidebar:hover nav ul li a:hover {
+    font-size: 16px; /* Increase text size on hover */
+    color: #FFD700; /* Change text color on hover */
+}
+
+/* Additional hover effects */
+nav ul li a:hover::before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    width: 5px;
+    height: 100%;
+    background-color: #FFD700; /* Vertical bar effect on hover */
+    transition: height 0.3s ease;
+}
+
+.sidebar:hover .logo-container {
+    transform: scale(1.1); /* Logo container grows slightly */
+}
+
+/* Hide the scrollbar when the modal is open */
+body.modal-open {
+    overflow: hidden; /* Disable scroll */
+}
+
+/* Center modal horizontally and vertically */
+.modal {
+    display: none; /* Modal is hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* Center the modal */
+    width: 100%; /* Full width for modal */
+    height: 100%; /* Full height for modal */
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal content box */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 450px; /* Increase modal width */
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Larger exit (X) button */
+.close {
+    font-size: 32px; /* Increase font size */
+    font-weight: bold;
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Fix spacing and enlarge text boxes */
+.password-container {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.password-container input {
+    padding-right: 55px; /* Add more space for larger eye icon */
+    font-size: 16px; /* Increase font size */
+    padding: 15px; /* Increase padding for larger input fields */
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Make sure padding and width are calculated together */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Eye icon fits text box height and turns red when clicked */
+.password-container i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 24px; /* Make the eye icon larger to match text box size */
+    color: #6c757d; /* Default grey eye color */
+    transition: color 0.3s ease;
+}
+
+.password-container i.active {
+    color: #8B0000; /* Dark red color when clicked */
+}
+
+/* Change button colors to red */
+button[type="button"], button[type="submit"] {
+    padding: 10px 15px;
+    background-color: #8B0000; /* Red color for buttons */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; /* Increase button font size */
+    margin-top: 10px;
+}
+
+/* Styling for Help Modal Form */
+.form-container {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.form-container input,
+.form-container select {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Additional CSS for modal close button */
+#close-help-modal {
+    font-size: 32px;
+    font-weight: bold;
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+}
+
+#close-help-modal:hover {
+    color: black;
+}
+
+
+
+
