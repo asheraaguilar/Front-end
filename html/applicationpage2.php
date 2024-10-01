@@ -23,6 +23,13 @@
                     <input type="text" id="applicantId" name="applicantId" value="EBA-109-24" readonly>
                 </div>
                 <div class="form-row">
+                    <label for="applicantType">Applicant Type:</label>
+                    <input type="text" id="applicantType" name="applicantType" value="College Financial Assistance" readonly>
+
+                    <label for="applicantStatus">Application Status:</label>
+                    <input type="text" id="applicantStatus" name="applicantStatus" value="Pending" readonly>
+                </div>
+                <div class="form-row">
                     <label for="dateOfBirth">Date of Birth:</label>
                     <input type="text" id="dateOfBirth" name="dateOfBirth" value="01/01/2000" readonly>
 
@@ -42,6 +49,13 @@
 
                     <label for="contactNumber">Contact Number:</label>
                     <input type="text" id="contactNumber" name="contactNumber" value="09952318729" readonly>
+                </div>
+                <div class="form-row">
+                    <label for="district">District:</label>
+                    <input type="text" id="district" name="district" value="West District" readonly>
+
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" value="Brgy.Sico Lipa City" readonly>
                 </div>
             </div>
 
