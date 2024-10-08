@@ -76,25 +76,11 @@
             <!-- Applicant rows will be dynamically added here -->
         </tbody>
     </table>
-</div>
 
-<!-- Edit Applicant Modal -->
-<div id="editApplicantModal" class="modal">
-    <div class="modal-content">
-        <span class="close-btn">&times;</span>
-        <h2>Edit Applicant</h2>
-        <form id="editApplicantForm">
-            <label for="name">Full Name:</label>
-            <input type="text" id="editName" placeholder="Enter full name" required>
-
-            <label for="email">Email Address:</label>
-            <input type="email" id="editEmail" placeholder="Enter email address" required>
-
-            <div class="buttons">
-                <button type="button" id="saveEditBtn" class="modal-btn">Save</button>
-                <button type="reset" id="cancelEditBtn" class="modal-btn cancel">Cancel</button>
-            </div>
-        </form>
+    <div class="pagination">
+                <button id="prevBtn">Previous</button>
+                <span id="pageNumber">Page 1</span>
+                <button id="nextBtn">Next</button>
     </div>
 </div>
 
@@ -256,10 +242,11 @@
                     <button id="saveEditBtn" class="modal-btn" style="display:none;">Save</button>
                     <button id="cancelEditBtn" class="modal-btn cancel" style="display:none;">Cancel</button>
             </div>
-            <div class="pagination">
-                <button id="prevBtn">Previous</button>
-                <span id="pageNumber">Page 1</span>
-                <button id="nextBtn">Next</button>
+            <div id="viewApplicationModal" class="modal">
+                <!-- Other modal content -->
+                <button id="acceptBtn" class="accept-btn">Accept</button>
+                <button id="failBtn" class="fail-btn">Failed</button>
+                <button class="close-btn">Close</button>
             </div>
         </div>
     </div>

@@ -137,6 +137,9 @@ button.modal-btn {
 }
 
 button.modal-btn.cancel {
+    width: 48%;
+    padding: 10px 0;
+    border-radius: 4px;
     background-color: #6c757d; /* Gray color for cancel button */
     color: white;
 }

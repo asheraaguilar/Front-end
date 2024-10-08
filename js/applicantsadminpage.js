@@ -18,6 +18,13 @@ const applicants = [
     { ctrlNumber: '002', name: 'Jane Smith', email: 'jane@example.com', status: 'Accepted', type: 'SHS Financial Assistance', district: 'West', barangay: 'Barangay 10', year: 2022 }
 ];
 
+const districtBarangays = {
+    'East': ['Barangay 1', 'Barangay 2', 'Barangay 3'],
+    'West': ['Barangay 10', 'Barangay 11', 'Barangay 12'],
+    'North': ['Barangay 20', 'Barangay 21', 'Barangay 22'],
+    'South': ['Barangay 30', 'Barangay 31', 'Barangay 32']
+};
+
 // Filters
 let selectedType = '';
 let selectedDistrict = '';
@@ -156,6 +163,7 @@ function viewApplicationForm(applicant, editMode) {
     viewApplicationModal.style.display = 'flex';
 }
 
+
 // Toggle between view and edit mode
 function toggleFormEditable(editable) {
     const formFields = document.querySelectorAll('#viewApplicationModal input');
@@ -165,27 +173,28 @@ function toggleFormEditable(editable) {
     });
 
     // Show the save and cancel buttons only if in edit mode
-    if (editable) {
-        saveEditBtn.style.display = 'block';
-        cancelEditBtn.style.display = 'block';
-    } else {
-        saveEditBtn.style.display = 'none';
-        cancelEditBtn.style.display = 'none';
-    }
+    saveEditBtn.style.display = editable ? 'block' : 'none';
+    cancelEditBtn.style.display = editable ? 'block' : 'none';
+
+    // Show accept/fail buttons only in view mode
+    document.getElementById('acceptBtn').style.display = editable ? 'none' : 'block';
+    document.getElementById('failBtn').style.display = editable ? 'none' : 'block';
 }
+
 
 // Save edited applicant
 saveEditBtn.addEventListener('click', () => {
     const name = document.getElementById('applicantName').value;
     const email = document.getElementById('editEmail').value; // Assuming email is present
 
-    // Assuming changes are updated in the applicants array or via an API call
+    // Update current applicant with new data
     currentApplicant.name = name;
     currentApplicant.email = email; // Update email in the data
 
     viewApplicationModal.style.display = 'none'; // Close the modal after saving
     loadApplicants(); // Reload the list to reflect changes
 });
+
 
 // Cancel edit operation
 cancelEditBtn.addEventListener('click', () => {
@@ -291,6 +300,14 @@ function updateApplicantStatus(status) {
     currentApplicant.status = status; // Update the applicant's status
     viewApplicationModal.style.display = 'none'; // Close the modal
     loadApplicants(); // Reload the list to reflect the updated status
+
+    // Use SweetAlert to give user feedback
+    Swal.fire({
+        icon: 'success',
+        title: `Applicant has been marked as ${status}`,
+        showConfirmButton: false,
+        timer: 1500
+    });
 }
 
 // View uploaded files
@@ -310,8 +327,6 @@ document.getElementById('viewFilesBtn').addEventListener('click', () => {
         });
     }
 });
-
-
 
 // Initial load of applicants
 loadApplicants();

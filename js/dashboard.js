@@ -12,11 +12,12 @@ var barangayData = {
 new Chart(document.getElementById('barangayBarChart'), { type: 'bar', data: barangayData });
 
 var districtData = {
-    labels: ['District 1', 'District 2', 'District 3', 'District 4'],
+    labels: ['Urban', 'South', 'East', 'West','North'],
     datasets: [{
         label: 'Scholarships by District',
-        data: [500, 400, 350, 250],
-        backgroundColor: ['#FF5733', '#FFC300', '#DAF7A6', '#C70039']
+        data: [500, 400, 350, 250, 300],
+        backgroundColor: ['#FF5733', '#FFC300', '#DAF7A6', '#C70039',  '#900C3F']
+
     }]
 };
 

@@ -1,0 +1,316 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+}
+
+.filter-section {
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    margin: 5px;
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.filter-btn:hover {
+    background-color: #45a049;
+}
+
+.styled-dropdown {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    width: 100%;
+    margin: 10px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f2f2f2;
+}
+
+button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button.edit {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button.delete {
+    background-color: #f44336;
+    color: white;
+}
+
+button.toggle {
+    background-color: #008CBA;
+    color: white;
+}
+
+button.view {
+    background-color: #ff9800;
+    color: white;
+}
+
+/* General modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Modal content */
+.modal-content {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    position: relative;
+    width: 70%; /* Increased width for readability */
+    max-width: 900px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    overflow-y: auto; /* For large content */
+    max-height: 90vh; /* Ensure content doesn't overflow the screen */
+}
+
+/* Modal heading */
+.modal-content h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #555;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+/* Improved form layout for two text boxes in a row */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 25px; /* Increased vertical spacing between rows */
+}
+
+.form-row label {
+    flex: 1 1 45%;
+    font-weight: bold;
+}
+
+.form-row input {
+    flex: 1 1 45%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Specific styles for sibling table */
+.sibling-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.sibling-table th, .sibling-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.sibling-table th {
+    background-color: #b30000;
+    color: white;
+    font-size: 16px;
+}
+
+/* Section dividers for better readability */
+.personal-info, .family-background, .educational-background {
+    margin-top: 30px;
+}
+
+.personal-info h2, .family-background h2, .educational-background h2 {
+    background-color: #b30000;
+    color: white;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Modal for password input */
+#passwordModal .modal-content {
+    width: 300px;
+}
+
+#passwordModal input {
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+/* Responsive adjustments for mobile screens */
+@media screen and (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+    }
+
+    .form-row input, .form-row label {
+        flex: 1 1 100%; /* Stack the text boxes on smaller screens */
+    }
+
+    .modal-content h2 {
+        font-size: 20px;
+    }
+}
+
+/* Search Section Styling */
+.search-section {
+    margin-bottom: 20px;
+    text-align: left; /* Center the search input */
+}
+
+.search-section h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for better visibility */
+    transition: border-color 0.3s ease;
+}
+
+#searchInput:focus {
+    border-color: #4CAF50; /* Match the green color used in buttons */
+    outline: none;
+}
+
+ /* Include the CSS styles from your previous example */
+ .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #4CAF50; /* Green when resolved */
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Adjustments for mobile screens */
+@media screen and (max-width: 768px) {
+    #searchInput {
+        width: 100%;
+    }
+}
+
