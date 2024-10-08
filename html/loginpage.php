@@ -11,7 +11,7 @@
 <body>
     <header>
         <div class="header-left">
-            <a href="landingpage.php"> <!-- Added link to the logo -->
+            <a href="../html/landingpage.php"> <!-- Added link to the logo -->
                 <img src="../img/Logo.png" alt="Lipa City Seal">
             </a>
             <span>Lipa Educational Benefit Assistance Program</span>
@@ -20,13 +20,11 @@
 
     <section class="hero">
         <div class="hero-content">
-            <h1>Welcome to<br><span class="main-title">Lipeño E-skolar System</span></h1>
+            <h1>Welcome<br><span class="main-title">Admin</span></h1>
             <form class="login-form">
-                <input type="text" placeholder="Applicant Control Number" required> <!-- Changed type to 'text' -->
+                <input type="text" placeholder="Username" required> <!-- Changed type to 'text' -->
                 <input type="password" placeholder="Password" required>
-                <a href="forgotpassword.php" class="forgot-password">Forgot Password ?</a>
                 <button type="submit">Login</button>
-                <p>Want to be a scholar? <a href="applyhome.php">Register</a></p>
             </form>
         </div>
     </section>

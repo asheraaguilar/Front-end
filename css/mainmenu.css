@@ -33,51 +33,60 @@ body {
     margin: 5px 0;
 }
 
-.applicant-info .pending {
-    color: red;
+.applicant-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; /* Add space between the text and the photo */
 }
 
-.carousel {
-    position: relative;
-    background-color: #fff;
-    padding: 0;
-    margin-bottom: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+.applicant-info .info-text {
+    flex-grow: 1; /* The text will take up the remaining space */
+}
+
+.applicant-info .photo {
+    width: 220px; /* Smaller size for the 2x2 photo */
+    height: 220px; /* Maintain the aspect ratio */
+    border-radius: 5px;
     overflow: hidden;
+    border: 5px solid #333;
 }
 
-.carousel-inner {
-    overflow: hidden;
-    height: 400px;
-    position: relative;
-}
-
-.carousel-item {
-    position: absolute;
-    width: 100%;
-    transition: transform 0.5s ease-in-out;
-}
-
-.carousel-item img {
+.applicant-info .photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.carousel-item.active {
-    position: relative;
-    transform: translateX(0);
+.applicant-info .status {
+    font-weight: bold;
+    color: red; /* Default color for pending status */
 }
 
-.carousel-caption {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    color: white;
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    border-radius: 5px;
+.carousel {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adding a shadow around the carousel */
+    border-radius: 8px; /* Slight rounding for better aesthetics */
+}
+
+.carousel-inner {
+    display: flex; /* Align items in a horizontal row */
+    transition: transform 0.5s ease-in-out; /* Smooth transition */
+    width: 100%;
+}
+
+.carousel-item {
+    min-width: 100%; /* Ensure each item takes full width of the carousel */
+    flex-shrink: 0; /* Prevent shrinking of items */
+    transition: transform 0.5s ease-in-out; /* Ensure smooth transitions */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .carousel-control {
@@ -90,6 +99,75 @@ body {
     transform: translateY(-50%);
     cursor: pointer;
     padding: 10px;
+    z-index: 10; /* Ensure controls are above the images */
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hide all slides by default */
+.mySlides {
+    display: none;
+}
+
+/* Fading animation */
+.fade {
+    animation: fadeEffect 1.5s ease-in-out;
+}
+
+@keyframes fadeEffect {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* Number text (x / y) */
+.numbertext {
+    color: #fff;
+    font-size: 12px;
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    z-index: 10;
+}
+
+/* Dots/circles */
+.carousel-dots {
+    text-align: center;
+    margin-top: 15px; /* Adjust margin to space it properly below the carousel */
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #333;
+}
+
+/* Control buttons */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
 }
 
 .carousel-control.prev {

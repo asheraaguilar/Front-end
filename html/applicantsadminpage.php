@@ -1,18 +1,126 @@
+<?php include '../html/navbaradmin.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lipeño E-skolar System</title>
+    <title>Lipa City Applicants</title>
     <link rel="icon" type="image/x-icon" href="../img/Logo.png">
-    <link rel="stylesheet" href="../css/applicationpage2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/applicantsadminpage.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
-    <div class="container">
-    <?php include '../html/navbar.php'; ?>
-        <h1>Educational Benefit Assistance - Lipa City</h1>
-        <div class="form-container">
-            <div class="personal-info">
+
+<div class="container">
+    <h1>Applicants</h1>
+
+    <!-- Search Section -->
+    <div class="search-section">
+        <h3>Search Applicants</h3>
+        <input type="text" id="searchInput" placeholder="Search by Name or Email" onkeyup="searchApplicants()">
+    </div>
+
+    <!-- Filter by Applicant Type -->
+    <div class="filter-section">
+        <h3>Filter by Applicant Type</h3>
+        <button class="filter-btn" onclick="filterByType('SHS Financial Assistance')">SHS Financial Assistance</button>
+        <button class="filter-btn" onclick="filterByType('College Financial Assistance')">College Financial Assistance</button>
+        <button class="filter-btn" onclick="filterByType('College Scholarship')">College Scholarship</button>
+    </div>
+
+    <!-- Filter by District and Barangay -->
+    <div class="filter-section">
+        <h3>Filter by District</h3>
+        <select id="districtDropdown" class="styled-dropdown" onchange="filterByDistrict(this.value)">
+            <option value="">All Districts</option>
+            <option value="East">East</option>
+            <option value="Urban">Urban</option>
+            <option value="South">South</option>
+            <option value="West">West</option>
+            <option value="North">North</option>
+        </select>
+
+        <select id="barangayDropdown" class="styled-dropdown" onchange="filterByBarangay(this.value)" style="display:none;">
+            <option value="">All Barangays</option>
+        </select>
+    </div>
+
+    <!-- Filter by Year -->
+    <div class="filter-section">
+        <h3>Filter by Year</h3>
+        <select id="yearDropdown" class="styled-dropdown" onchange="filterByYear(this.value)">
+            <option value="">All Years</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+        </select>
+    </div>
+
+    <!-- Applicants Table -->
+    <table>
+        <thead>
+            <tr>
+                <th>Control Number</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="applicantContainer">
+            <!-- Applicant rows will be dynamically added here -->
+        </tbody>
+    </table>
+</div>
+
+<!-- Edit Applicant Modal -->
+<div id="editApplicantModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Edit Applicant</h2>
+        <form id="editApplicantForm">
+            <label for="name">Full Name:</label>
+            <input type="text" id="editName" placeholder="Enter full name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="editEmail" placeholder="Enter email address" required>
+
+            <div class="buttons">
+                <button type="button" id="saveEditBtn" class="modal-btn">Save</button>
+                <button type="reset" id="cancelEditBtn" class="modal-btn cancel">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Password Modal -->
+<div id="passwordModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Enter Password</h2>
+        <form id="passwordForm">
+            <label for="password">Password:</label>
+            <input type="password" id="passwordInput" placeholder="Enter password" required>
+            <div class="buttons">
+                <button type="button" id="submitPasswordBtn" class="modal-btn">Submit</button>
+                <button type="button" id="cancelPasswordBtn" class="modal-btn cancel">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- View Application Modal -->
+<div id="viewApplicationModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Application Form</h2>
+        <div id="viewApplicationDetails">
+        <div class="personal-info">
                 <h2>Personal Information</h2>
                 <!-- Personal information section with two columns -->
                 <div class="form-row">
@@ -144,29 +252,20 @@
                     <input type="text" id="gwa" name="gwa" value="1.57" readonly>
                 </div>
             </div>
-            <div id="uploadSection" style="display:none;">
-                <h2>Upload Documents</h2>
-                <div class="form-row">
-                    <label for="uploadID">Upload ID:</label>
-                    <input type="file" id="uploadID" name="uploadID">
-                </div>
-                <div class="form-row">
-                    <label for="uploadIndigencyForm">Upload Barangay Indigency Form:</label>
-                    <input type="file" id="uploadIndigencyForm" name="uploadIndigencyForm">
-                </div>
-                <div class="form-row">
-                    <label for="uploadSemGrades">Upload Current Sem Grades:</label>
-                    <input type="file" id="uploadSemGrades" name="uploadSemGrades">
-                </div>
+            <div class="buttons">
+                    <button id="saveEditBtn" class="modal-btn" style="display:none;">Save</button>
+                    <button id="cancelEditBtn" class="modal-btn cancel" style="display:none;">Cancel</button>
+            </div>
+            <div class="pagination">
+                <button id="prevBtn">Previous</button>
+                <span id="pageNumber">Page 1</span>
+                <button id="nextBtn">Next</button>
             </div>
         </div>
-
-        <div class="button-row">
-            <button type="button" id="renewalBtn" onclick="enableEdit()">Renewal</button>
-            <button type="submit" id="submitBtn" style="display: none;">Submit</button>
-        </div>
     </div>
+</div>
 
-    <script src="../js/applicationpage2.js"></script>
+<script src="../js/applicantsadminpage.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

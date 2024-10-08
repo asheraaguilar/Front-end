@@ -11,7 +11,7 @@
 <body>
     <header>
         <div class="header-left">
-            <a href="landingpage.php"> <!-- Added link to the logo -->
+            <a href="../html/landingpage.php"> <!-- Added link to the logo -->
                 <img src="../img/Logo.png" alt="Lipa City Seal">
             </a>
             <span>Lipa Educational Benefit Assistance Program</span>

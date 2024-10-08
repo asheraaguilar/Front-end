@@ -18,23 +18,73 @@
             <div class="header">
                 <h1>Educational Benefit Assistance - Lipa City</h1>
                 <div class="applicant-info">
-                    <p><strong>Applicant Name:</strong> Ashera Kathryn R. Aguilar</p>
-                    <p><strong>Applicant ID:</strong> EBA-109-24</p>
-                    <p><strong>Address:</strong> Brgy. Sico Lipa City Batangas</p>
-                    <p><strong>Email:</strong> aguilaraskathryn@gmail.com</p>
-                    <p><strong>Contact Number:</strong> 09952318729</p>
-                    <p><strong>Status:</strong> <span class="pending">PENDING</span></p>
+                    <div class="info-text">
+                        <p><strong>Applicant Name:</strong> Ashera Kathryn R. Aguilar</p>
+                        <p><strong>Applicant ID:</strong> EBA-109-24</p>
+                        <p><strong>Address:</strong> Brgy. Sico Lipa City Batangas</p>
+                        <p><strong>Email:</strong> aguilaraskathryn@gmail.com</p>
+                        <p><strong>Contact Number:</strong> 09952318729</p>
+                        <p><strong>Status:</strong> <span class="status">PENDING</span></p>
+                    </div>
+                    <div class="photo">
+                        <img src="../img/samplepic.jpg" alt="Applicant Photo">
+                    </div>
                 </div>
             </div>
             <div class="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="../img/Announcement.png" alt="Announcement 1">
+                <div class="slideshow-container">
+                    <!-- Slide 1 -->
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 6</div>
+                        <img src="../img/Announcement 1.png" style="width:100%">
                     </div>
+
+                    <!-- Slide 2 -->
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 6</div>
+                        <img src="../img/Announcement 2.png" style="width:100%">
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 6</div>
+                        <img src="../img/Announcement 3.png" style="width:100%">
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="mySlides fade">
+                        <div class="numbertext">4 / 6</div>
+                        <img src="../img/Announcement 4.png" style="width:100%">
+                    </div>
+
+                    <!-- Slide 5 -->
+                    <div class="mySlides fade">
+                        <div class="numbertext">5 / 6</div>
+                        <img src="../img/Announcement 5.png" style="width:100%">
+                    </div>
+
+                    <!-- Slide 6 -->
+                    <div class="mySlides fade">
+                        <div class="numbertext">6 / 6</div>
+                        <img src="../img/Announcement 6.png" style="width:100%">
+                    </div>
+
+                    <!-- Previous and Next buttons -->
+                    <button class="carousel-control prev" onclick="plusSlides(-1)">❮</button>
+                    <button class="carousel-control next" onclick="plusSlides(1)">❯</button>
                 </div>
-                <button class="carousel-control prev">❮</button>
-                <button class="carousel-control next">❯</button>
             </div>
+
+            <!-- Dots navigation placed outside the carousel -->
+            <div class="carousel-dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+            </div>
+
             <div class="mission-vision">
                 <div class="mission">
                     <h3>Mission</h3>
@@ -48,6 +98,6 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../js/applicationpage.js"></script>
+    <script src="../js/mainmenu.js"></script> <!-- Link to mainmenu.js -->
 </body>
 </html>

@@ -5,301 +5,168 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lipeño E-skolar System</title>
     <link rel="icon" type="image/x-icon" href="../img/Logo.png">
-    <link rel="stylesheet" href="../css/applicationpage.css">
-    <link rel="stylesheet" href="../css/navbar.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.net/npm/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="../css/applicationpage2.css">
 </head>
 <body>
     <div class="container">
-        <?php include '../html/navbar.php'; ?> 
+    <?php include '../html/navbar.php'; ?>
+        <h1>Educational Benefit Assistance - Lipa City</h1>
+        <div class="form-container">
+            <div class="personal-info">
+                <h2>Personal Information</h2>
+                <!-- Personal information section with two columns -->
+                <div class="form-row">
+                    <label for="applicantName">Applicant Name:</label>
+                    <input type="text" id="applicantName" name="applicantName" value="Ashera Kathryn R. Aguilar" readonly>
 
-        <!-- Main Content Wrapper with Scrollbar -->
-        <div class="scrollable-content">
-            <div class="main-content">
-                <h1>Educational Benefit Assistance - Lipa City</h1>
-                <h2>Application</h2>
-                <!-- Progress Indicator -->
-                <div class="container">
-                <ul class="progressbar">
-                    <li class="active"><i class="fa fa-user"></i> Basic Info</li>
-                    <li><i class="fa fa-file"></i> Requirements</li>
-                    <li><i class="fa fa-check"></i> Submit</li>
-                </ul>
-                <div class="content-wrapper">
-                    <div class="application-steps">
-                        <button class="step-button active" id="step-1" onclick="showForm('additional-info')">
-                            <div class="step-icon" id="step-1-icon">1</div>
-                            <div class="step-description">
-                                <h3>Additional Information</h3>
-                                <p>Enter details about you</p>
-                            </div>
-                        </button>
-                        <button class="step-button" id="step-2" onclick="showForm('family-info')">
-                            <div class="step-icon" id="step-2-icon">2</div>
-                            <div class="step-description">
-                                <h3>Family</h3>
-                                <p>Family & Guardian</p>
-                            </div>
-                        </button>
-                        <button class="step-button" id="step-3" onclick="showForm('intentions-info')">
-                            <div class="step-icon" id="step-3-icon">3</div>
-                            <div class="step-description">
-                                <h3>Intentions</h3>
-                                <p>Educational Background</p>
-                            </div>
-                        </button>
+                    <label for="applicantId">Applicant ID:</label>
+                    <input type="text" id="applicantId" name="applicantId" value="EBA-109-24" readonly>
+                </div>
+                <div class="form-row">
+                    <label for="applicantType">Applicant Type:</label>
+                    <input type="text" id="applicantType" name="applicantType" value="College Financial Assistance" readonly>
 
-                        <!-- User Info Section -->
-                        <div class="user-info">
-                            <p><strong>Name:</strong> ASHERA KATHRYN R. AGUILAR</p>
-                            <p><strong>Address:</strong> Brgy. Sico Lipa City Batangas</p>
-                            <p><strong>Email:</strong> aguilarasherakathryn@gmail.com</p>
-                            <p><strong>Contact Number:</strong> 09952318729</p>
-                            <p><strong>Type of Beneficiary:</strong> College Financial Assistance</p>
-                        </div>
-                    </div>
+                    <label for="applicantStatus">Application Status:</label>
+                    <input type="text" id="applicantStatus" name="applicantStatus" value="Pending" readonly>
+                </div>
+                <div class="form-row">
+                    <label for="dateOfBirth">Date of Birth:</label>
+                    <input type="text" id="dateOfBirth" name="dateOfBirth" value="01/01/2000" readonly>
 
-                    <!-- Form Container -->
-                    <div class="form-container">
-                        <!-- Additional Information Section -->
-                        <section class="form-section" id="additional-info">
-                            <h3>Additional Information</h3>
-                            <form onsubmit="event.preventDefault(); completeStep(1);">
-                                <div class="form-group">
-                                    <div class="form-row">
-                                        <div class="form-column">
-                                            <label for="picture">Picture</label>
-                                            <div class="picture-container">
-                                                <img id="picture-preview" src="img/default-profile.png" alt="User Picture">
-                                                <input type="file" id="picture" accept="image/*" onchange="previewImage(event)">
-                                            </div>
-                                        </div>
-                                        <div class="form-column">
-                                            <label for="dob">Date of Birth</label>
-                                            <input type="date" id="dob" placeholder="Enter Date of Birth" required>
-                                        </div>
-                                    </div>
-                                </div>
+                    <label for="placeOfBirth">Place of Birth:</label>
+                    <input type="text" id="placeOfBirth" name="placeOfBirth" value="Lipa City" readonly>
+                </div>
+                <div class="form-row">
+                    <label for="gender">Gender:</label>
+                    <input type="text" id="gender" name="gender" value="Female" readonly>
 
-                                <div class="form-group">
-                                    <div class="form-row">
-                                        <div class="form-column">
-                                            <label>Gender</label>
-                                            <label><input type="radio" name="gender" value="male" required> Male</label>
-                                            <label><input type="radio" name="gender" value="female" required> Female</label>
-                                        </div>
-                                        <div class="form-column">
-                                            <label for="age">Age</label>
-                                            <input type="number" id="age" placeholder="Enter your age" required>
-                                        </div>
-                                    </div>
-                                </div>
+                    <label for="age">Age:</label>
+                    <input type="text" id="age" name="age" value="24" readonly>
+                </div>
+                <div class="form-row">
+                    <label for="civilStatus">Civil Status:</label>
+                    <input type="text" id="civilStatus" name="civilStatus" value="Single" readonly>
 
-                                <div class="form-group">
-                                    <div class="form-row">
-                                        <div class="form-column">
-                                            <label for="gwa">General Weighted Average</label>
-                                            <input type="number" step="0.01" id="gwa" placeholder="Enter General Weighted Average" required>
-                                        </div>
-                                        <div class="form-column">
-                                            <label for="civil-status">Civil Status</label>
-                                            <select id="civil-status" placeholder="Enter Civil Status" required>
-                                                <option value="single">Single</option>
-                                                <option value="married">Married</option>
-                                                <option value="divorced">Divorced</option>
-                                                <option value="widowed">Widowed</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
+                    <label for="contactNumber">Contact Number:</label>
+                    <input type="text" id="contactNumber" name="contactNumber" value="09952318729" readonly>
+                </div>
+                <div class="form-row">
+                    <label for="district">District:</label>
+                    <input type="text" id="district" name="district" value="West District" readonly>
 
-                                <button type="submit" class="next-btn">Next</button>
-                            </form>
-                        </section>
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" value="Brgy.Sico Lipa City" readonly>
+                </div>
+            </div>
 
-                        <!-- Family Information Section -->
-                        <section class="form-section" id="family-info" style="display: none;">
-                            <h3>Family Information</h3>
-                            <form onsubmit="event.preventDefault(); completeStep(2);">
-                                <div class="form-group">
-                                    <div class="form-row">
-                                        <div class="form-column">
-                                            <label for="mother-first-name">Mother's First Name</label>
-                                            <input type="text" id="mother-first-name" placeholder="Enter mother's first name" required>
-                                        </div>
-                                        <div class="form-column">
-                                            <label for="mother-middle-name">Mother's Middle Name</label>
-                                            <input type="text" id="mother-middle-name" placeholder="Enter mother's middle name">
-                                        </div>
-                                    </div>
-                                </div>
+            <div class="family-background">
+                <h2>Family Background</h2>
+                <!-- Family background fields in two columns -->
+                <div class="form-row">
+                    <label for="fatherName">Father's Name:</label>
+                    <input type="text" id="fatherName" name="fatherName" value="Angelito P. Aguilar" readonly>
 
-                                <div class="form-group">
-                                    <div class="form-row">
-                                        <div class="form-column">
-                                            <label for="mother-last-name">Mother's Surname</label>
-                                            <input type="text" id="mother-last-name" placeholder="Enter mother's surname" required>
-                                        </div>
-                                        <div class="form-column">
-                                            <label for="mother-contact-number">Mother's Contact Number</label>
-                                            <input type="text" id="mother-contact-number" placeholder="Enter mother's contact number" required>
-                                        </div>
-                                    </div>
-                                </div>
+                    <label for="fatherOccupation">Occupation:</label>
+                    <input type="text" id="fatherOccupation" name="fatherOccupation" value="Security Guard" readonly>
+                </div>
+                <div class="form-row">
+                    <label for="fatherContact">Father's Contact Number:</label>
+                    <input type="text" id="fatherContact" name="fatherContact" value="09123456789" readonly>
 
-                                <div class="form-group">
-                                    <div class="form-row">
-                                        <div class="form-column">
-                                            <label for="mother-occupation">Mother's Occupation</label>
-                                            <input type="text" id="mother-occupation" placeholder="Enter mother's occupation">
-                                        </div>
-                                    </div>
-                                </div>
+                    <label for="motherName">Mother's Name:</label>
+                    <input type="text" id="motherName" name="motherName" value="Mary Jane R. Aguilar" readonly>
+                </div>
+                <div class="form-row">
+                    <label for="motherOccupation">Mother's Occupation:</label>
+                    <input type="text" id="motherOccupation" name="motherOccupation" value="None" readonly>
 
-                                <div class="form-group">
-                                    <div class="form-row">
-                                        <div class="form-column">
-                                            <label for="father-first-name">Father's First Name</label>
-                                            <input type="text" id="father-first-name" placeholder="Enter father's first name" required>
-                                        </div>
-                                        <div class="form-column">
-                                            <label for="father-middle-name">Father's Middle Name</label>
-                                            <input type="text" id="father-middle-name" placeholder="Enter father's middle name">
-                                        </div>
-                                    </div>
-                                </div>
+                    <label for="motherContact">Mother's Contact Number:</label>
+                    <input type="text" id="motherContact" name="motherContact" value="09123456780" readonly>
+                </div>
 
-                                <div class="form-group">
-                                    <div class="form-row">
-                                        <div class="form-column">
-                                            <label for="father-last-name">Father's Surname</label>
-                                            <input type="text" id="father-last-name" placeholder="Enter father's surname" required>
-                                        </div>
-                                        <div class="form-column">
-                                            <label for="father-contact-number">Father's Contact Number</label>
-                                            <input type="text" id="father-contact-number" placeholder="Enter father's contact number" required>
-                                        </div>
-                                    </div>
-                                </div>
+                <h3>Sibling Information</h3>
+                <table class="sibling-table">
+                    <thead>
+                        <tr>
+                            <th>Name of Sibling</th>
+                            <th>Occupation/Year Level</th>
+                            <th>Company/School</th>
+                            <th>Date of Birth</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="siblingTableBody">
+                        <tr>
+                            <td contenteditable="true">Abraham Kenneth Aguilar</td>
+                            <td contenteditable="true">3rd Year College</td>
+                            <td contenteditable="true">Batangas State University TNEU Lipa</td>
+                            <td contenteditable="true">02/19/2004</td>
+                            <td><button onclick="removeSibling(this)">Remove</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button type="button" onclick="addSibling()">Add Sibling</button>
+            </div>
 
-                                <div class="form-group">
-                                    <div class="form-row">
-                                        <div class="form-column">
-                                            <label for="father-occupation">Father's Occupation</label>
-                                            <input type="text" id="father-occupation" placeholder="Enter father's occupation">
-                                        </div>
-                                    </div>
-                                </div>
+            <div class="educational-background">
+                <h2>Educational Background</h2>
+                <!-- Educational background fields in two columns -->
+                <div class="form-row">
+                    <label for="primarySchool">Primary School:</label>
+                    <input type="text" id="primarySchool" name="primarySchool" value="FABINHS" readonly>
 
-                                <h3>Sibling Information</h3>
-                                <table id="siblings-table" border="1" cellpadding="10" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>Name of Sibling</th>
-                                            <th>Occupation/Year Level</th>
-                                            <th>Company/School</th>
-                                            <th>Date of Birth</th>
-                                            <th>Age</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td><input type="text" name="sibling-name[]" required></td>
-                                            <td><input type="text" name="sibling-occupation[]" required></td>
-                                            <td><input type="text" name="sibling-company[]" required></td>
-                                            <td><input type="date" name="sibling-dob[]" required></td>
-                                            <td><input type="number" name="sibling-age[]" required></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                    <label for="yearGraduatedPrimary">Year Graduated (Primary):</label>
+                    <input type="text" id="yearGraduatedPrimary" name="yearGraduatedPrimary" value="2012" readonly>
+                </div>
+                <div class="form-row">
+                    <label for="secondarySchool">Secondary School:</label>
+                    <input type="text" id="secondarySchool" name="secondarySchool" value="FABINHS" readonly>
 
-                                <button type="button" onclick="addSiblingRow()">Add Sibling</button>
+                    <label for="yearGraduatedSecondary">Year Graduated (Secondary):</label>
+                    <input type="text" id="yearGraduatedSecondary" name="yearGraduatedSecondary" value="2016" readonly>
+                </div>
+                <div class="form-row">
+                    <label for="seniorhighSchool">Senior High School:</label>
+                    <input type="text" id="seniorhighSchool" name="seniorhighSchool" value="FABINHS" readonly>
 
-                                <button type="submit" class="next-btn">Next</button>
-                            </form>
-                        </section>
+                    <label for="yearGraduatedSHS">Year Graduated (SHS):</label>
+                    <input type="text" id="yearGraduatedSHS" name="yearGraduatedSHS" value="2016" readonly>
+                </div>
+                <div class="form-row">
+                    <label for="presentSchool">Present School:</label>
+                    <input type="text" id="presentSchool" name="presentSchool" value="Batangas State University" readonly>
 
-                        <!-- Intentions Form Section -->
-                        <section class="form-section" id="intentions-info" style="display: none;">
-                            <h3>Intentions</h3>
-                            <form action="requirementspage.php" method="post">
-                                <!-- Educational Background Section -->
-                                <div class="form-group">
-                                    <div class="form-row">
-                                        <div class="form-column">
-                                            <label for="elementary-school">Elementary School</label>
-                                            <input type="text" id="elementary-school" name="elementary_school" placeholder="Enter Elementary School" required>
-                                        </div>
-                                        <div class="form-column">
-                                            <label for="elementary-year">Year Graduated</label>
-                                            <input type="number" id="elementary-year" name="elementary_year" placeholder="Enter Year Graduated" required>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <div class="form-row">
-                                        <div class="form-column">
-                                            <label for="junior-high-school">Junior High School</label>
-                                            <input type="text" id="junior-high-school" name="junior_high_school" placeholder="Enter Junior High School" required>
-                                        </div>
-                                        <div class="form-column">
-                                            <label for="junior-year">Year Graduated</label>
-                                            <input type="number" id="junior-year" name="junior_year" placeholder="Enter Year Graduated" required>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <div class="form-row">
-                                        <div class="form-column">
-                                            <label for="senior-high-school">Senior High School</label>
-                                            <input type="text" id="senior-high-school" name="senior_high_school" placeholder="Enter Senior High School" required>
-                                        </div>
-                                        <div class="form-column">
-                                            <label for="senior-year">Year Graduated</label>
-                                            <input type="number" id="senior-year" name="senior_year" placeholder="Enter Year Graduated" required>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Present Education Section -->
-                                <div class="form-group">
-                                    <div class="form-row">
-                                        <div class="form-column">
-                                            <label for="present-school">Present School</label>
-                                            <input type="text" id="present-school" name="present_school" placeholder="Enter Present School" required>
-                                        </div>
-                                        <div class="form-column">
-                                            <label for="course-strand">Course/Strand</label>
-                                            <input type="text" id="course-strand" name="course_strand" placeholder="Enter Course or Strand" required>
-                                        </div>
-                                        <div class="form-column">
-                                            <label for="year-level">Year Level/Grade</label>
-                                            <input type="text" id="year-level" name="year_level" placeholder="Enter Year Level or Grade" required>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Other Scholarship Grants Section -->
-                                <div class="form-group">
-                                    <label>Have you applied for or is currently enjoying other scholarship grants beside our EBA scholarship Program?</label>
-                                    <label><input type="radio" name="other_scholarship" value="yes" required> Yes</label>
-                                    <label><input type="radio" name="other_scholarship" value="no" required> No</label>
-                                </div>
-
-                                <button type="submit" class="next-btn">Submit</button>
-                            </form>
-                        </section>
-                    </div>
+                    <label for="program">Program/Strand:</label>
+                    <input type="text" id="program" name="program" value="BS Information Technology" readonly>
+                </div>
+                <div class="form-row">
+                    <label for="gwa">GWA:</label>
+                    <input type="text" id="gwa" name="gwa" value="1.57" readonly>
+                </div>
+            </div>
+            <div id="uploadSection" style="display:none;">
+                <h2>Upload Documents</h2>
+                <div class="form-row">
+                    <label for="uploadID">Upload ID:</label>
+                    <input type="file" id="uploadID" name="uploadID">
+                </div>
+                <div class="form-row">
+                    <label for="uploadIndigencyForm">Upload Barangay Indigency Form:</label>
+                    <input type="file" id="uploadIndigencyForm" name="uploadIndigencyForm">
+                </div>
+                <div class="form-row">
+                    <label for="uploadSemGrades">Upload Current Sem Grades:</label>
+                    <input type="file" id="uploadSemGrades" name="uploadSemGrades">
                 </div>
             </div>
         </div>
+
+        <div class="button-row">
+            <button type="button" id="renewalBtn" onclick="enableEdit()">Renewal</button>
+            <button type="submit" id="submitBtn" style="display: none;">Submit</button>
+        </div>
     </div>
 
-    <!-- Include JS File -->
-    <script src="../js/applicationpage.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/applicationpage2.js"></script>
 </body>
 </html>

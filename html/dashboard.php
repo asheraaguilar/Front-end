@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="container">
-        <?php include '../html/navbaruser.php'; ?>
+        <?php include '../html/navbaradmin.php'; ?>
         
         <!-- Main Content -->
         <div class="main-content">
